@@ -1,0 +1,587 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  font-family: "Noto Sans TC", sans-serif;
+  flex-direction: column;
+  align-items: center;
+}
+.space {
+  width: 100%;
+  height: 50px;
+}
+/* clock start------------------------------------- */
+.clock {
+  width: 320px;
+  height: 320px;
+  /* background-color: rgb(2, 2, 63); */
+  position: relative;
+}
+.clock .outfirst {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: 0.3s;
+}
+.clock .outfirst .outfirsline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./img/out1line.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+  animation: clockfirstline 90s linear infinite;
+}
+.clock .outfirst .outfirsttext {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./img/out1.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  animation: clockoutfirst 50s linear infinite;
+}
+@keyframes clockoutfirst {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes clockfirstline {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* ---------------------- */
+.clock .outsecond {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: 0.3s;
+}
+
+.clock .outsecond .outsecondtext {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url("./img/out2.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  animation: clockoutsec 40s linear infinite;
+}
+
+@keyframes clockoutsec {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* ------------------------------------ */
+.clock .middle {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: 0.3s;
+}
+.clock .middle .middletext {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url("./img/middle.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  animation: middletext 90s linear infinite;
+}
+@keyframes middletext {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+/* ------------------------------------ */
+.clock .innerback {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: 0.3s;
+}
+.clock .innerback .innerbackmiddle {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url("./img/innerbackmiddle.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  animation: ibm 90s linear infinite;
+}
+@keyframes ibm {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.clock .innerback .innerbackmiddle .ibmbig {
+  width: 90px;
+  height: 90px;
+  background-image: url("./img/ibmbig.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 150px;
+  left: 50px;
+  animation: ibmb 50s linear infinite;
+}
+@keyframes ibmb {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.clock .innerback .innerbackmiddle .ibmsmall {
+  width: 50px;
+  height: 50px;
+  background-image: url("./img/ibmsmall.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 200px;
+  left: 180px;
+}
+/* ---------------------------------------------- */
+.clock .innerbacksec {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: 0.3s;
+}
+.clock .innerbacksec .ibsm {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url("./img/ibsm.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  animation: ibsm 60s linear infinite;
+}
+@keyframes ibsm {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.clock .innerbacksec .ibsm .ibsmcircle {
+  width: 120px;
+  height: 120px;
+  background-image: url("./img/ibsmcircle.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 150px;
+  right: 50px;
+  animation: ibsmc 10s linear infinite;
+}
+.clock .innerbacksec .ibsm .ibsmcsmall {
+  width: 70px;
+  height: 70px;
+  background-image: url("./img/ibmsmall.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 50px;
+  right: 150px;
+}
+@keyframes ibsmc {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+/* --------------------------- */
+.clock .gears {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: 0.3s;
+}
+.clock .gears .gearbig {
+  width: 80px;
+  height: 80px;
+  background-image: url("./img/gearbig.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: 100px;
+  right: 50px;
+  /* animation: imfirst 60s steps(60) infinite; */
+}
+.clock .gears .gearamall {
+  width: 40px;
+  height: 40px;
+  background-image: url("./img/gearsmall.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: 120px;
+  right: 140px;
+  /* animation: imsec 60s steps(60) infinite; */
+}
+.clock .gears .gearnone {
+  width: 40px;
+  height: 40px;
+  background-image: url("./img/gearnone.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: 65px;
+  right: 130px;
+  animation: gearnone 1s linear infinite;
+}
+@keyframes gearnone {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/* --------------------- */
+.clock .innermiddle {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: 0.3s;
+}
+.clock .innermiddle .imfirst {
+  width: 60px;
+  height: 60px;
+  background-image: url("./img/imf.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 150px;
+  left: 60px;
+  /* animation: imfirst 60s steps(60) infinite; */
+}
+@keyframes imfirst {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.clock .innermiddle .imsec {
+  width: 50px;
+  height: 50px;
+  background-image: url("./img/imsec.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 100px;
+  right: 60px;
+  /* animation: imsec 60s steps(60) infinite; */
+}
+@keyframes imsec {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.clock .innermiddle .imthird {
+  width: 40px;
+  height: 40px;
+  background-image: url("./img/imthird.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 60px;
+  left: 120px;
+  animation: imthird 20s linear infinite;
+}
+@keyframes imthird {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* ----------------------------------------- */
+.clock .maintext {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: 0.3s;
+}
+.clock .maintext .mainnum {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url("./img/number.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+}
+/* ----------------------------------------- */
+.clock .spout {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: 0.3s;
+}
+.clock .spout .secpin {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 65px;
+  right: 70px;
+}
+.clock .spout .secpin .spnumber {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url("./img/spnumber.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+}
+
+.clock .spout .secpin .sp {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url("./img/sp.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+}
+/* ------------------------------ */
+.clock .spin {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: 0.3s;
+}
+.clock .spin .hoursp {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url("./img/hpin.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  z-index: 5;
+}
+.clock .spin .minsp {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url("./img/mpin.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  z-index: 4;
+}
+/* --------------------------------- */
+.clock .date {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: 0.3s;
+}
+.clock .date .day {
+  top: 130px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  color: rgb(0, 132, 255);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+.clock .date .month {
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  color: rgb(0, 132, 255);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+.clock .date .dat {
+  top: 115px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  color: rgb(0, 132, 255);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+/* -------------------- */
+.clock:hover .outfirst {
+  top: -10px;
+  left: 10px;
+  transform: rotateX(30deg) rotateY(30deg);
+}
+.clock:hover .outsecond {
+  top: -20px;
+  left: 20px;
+  transform: rotateX(30deg) rotateY(30deg);
+}
+.clock:hover .middle {
+  top: -30px;
+  left: 30px;
+  transform: rotateX(30deg) rotateY(30deg);
+}
+.clock:hover .innerback {
+  top: -40px;
+  left: 40px;
+  transform: rotateX(30deg) rotateY(30deg);
+}
+.clock:hover .innerbacksec {
+  top: -50px;
+  left: 50px;
+  transform: rotateX(30deg) rotateY(30deg);
+}
+.clock:hover .gears {
+  top: -60px;
+  left: 60px;
+  transform: rotateX(30deg) rotateY(30deg);
+}
+.clock:hover .innermiddle {
+  top: -70px;
+  left: 70px;
+  transform: rotateX(30deg) rotateY(30deg);
+}
+.clock:hover .maintext {
+  top: -80px;
+  left: 80px;
+  transform: rotateX(30deg) rotateY(30deg);
+}
+.clock:hover .spout {
+  top: -90px;
+  left: 90px;
+  transform: rotateX(30deg) rotateY(30deg);
+}
+.clock:hover .spin {
+  top: -100px;
+  left: 100px;
+  transform: rotateX(30deg) rotateY(30deg);
+}
+.clock:hover .date {
+  top: -110px;
+  left: 110px;
+  transform: rotateX(30deg) rotateY(30deg);
+}
+/* ----------------rgb start---------------- */
+.block {
+  position: relative;
+  margin: 20px;
+  width: 350px;
+  height: 60px;
+  color: aqua;
+  padding: 10px;
+  background: linear-gradient(0deg, black, rgb(67, 64, 64));
+}
+.glow::before,
+.glow::after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(
+    42deg,
+    rgba(255, 46, 0, 1) 9%,
+    rgba(232, 137, 4, 1) 18%,
+    rgba(255, 235, 0, 1) 26%,
+    rgba(52, 255, 0, 1) 37%,
+    rgba(0, 255, 222, 1) 49%,
+    rgba(0, 117, 255, 1) 62%,
+    rgba(171, 0, 255, 1) 78%,
+    rgba(253, 0, 0, 1) 91%
+  );
+  background-size: 400%;
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  z-index: -1;
+  animation: rgbanime 10s linear infinite;
+}
+
+@keyframes rgbanime {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 400% 0;
+  }
+}
+.glow::after {
+  filter: blur(40px);
+}
+.glow .glowtext {
+  font-size: 1.3rem;
+  text-align: center;
+}
