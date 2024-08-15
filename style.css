@@ -541,7 +541,7 @@ body {
   position: relative;
   margin: 20px;
   width: 350px;
-  height: 60px;
+  height: 80px;
   color: aqua;
   padding: 10px;
   background: linear-gradient(0deg, black, rgb(67, 64, 64));
@@ -581,7 +581,62 @@ body {
 .glow::after {
   filter: blur(40px);
 }
-.glow .glowtext {
-  font-size: 1.3rem;
+.block .timetext {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.block .timetext .tthour,
+.ttdot,
+.ttmin {
+  font-size: 3rem;
+  line-height: 40px;
+  margin: 0 10px;
+}
+.block .timetext .tthour {
+  background: -webkit-linear-gradient(90deg, #144dd1, #17b9d2);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.block .timetext .ttdot {
+  line-height: 30px;
+  background: -webkit-linear-gradient(90deg, #ecf00a, #e2cf01);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.block .timetext .ttmin {
+  background: -webkit-linear-gradient(90deg, #ff5e9a, #ffb960);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.block .timetext .smalltext {
+  margin-left: 5px;
+}
+.block .timetext .smalltext .ampm {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  background: -webkit-linear-gradient(90deg, #ffa113, #fff71b);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.block .timetext .smalltext .ttsec {
+  font-size: 0.8rem;
   text-align: center;
+  background: -webkit-linear-gradient(90deg, #0aef84, #14fc08);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.block .monthtext {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+.block .monthtext .mtmonth,
+.mtdate,
+.mtday {
+  margin: 0 5px;
+  background: -webkit-linear-gradient(90deg, #0a69ef, #27fff4);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
