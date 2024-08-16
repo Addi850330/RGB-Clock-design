@@ -35,9 +35,24 @@ setInterval(() => {
   imsec.style.transform = `rotate(${ss}deg)`;
   // -------------text set-------------
   let h = day.getHours();
-  tthour.innerHTML = day.getHours();
-  ttmin.innerHTML = day.getMinutes();
-  ttsec.innerHTML = day.getSeconds();
+  let m = day.getMinutes();
+  let s = day.getSeconds();
+  if (h < 10) {
+    tthour.innerHTML = `0${day.getHours()}`;
+  } else {
+    tthour.innerHTML = day.getHours();
+  }
+  if (m < 10) {
+    ttmin.innerHTML = `0${day.getMinutes()}`;
+  } else {
+    ttmin.innerHTML = day.getMinutes();
+  }
+  if (s < 10) {
+    ttsec.innerHTML = `0${day.getSeconds()}`;
+  } else {
+    ttsec.innerHTML = day.getSeconds();
+  }
+
   if (h >= 12) {
     ampm.innerHTML = "PM";
   } else {
