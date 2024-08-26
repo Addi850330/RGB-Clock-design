@@ -15,7 +15,8 @@ body {
 .clock {
   width: 320px;
   height: 320px;
-  /* background-color: rgb(2, 2, 63); */
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
   position: relative;
 }
 .clock .outfirst {
@@ -639,4 +640,71 @@ body {
   background: -webkit-linear-gradient(90deg, #0a69ef, #27fff4);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+}
+/* bgc-animetion */
+.bgcAnime {
+  width: 100%;
+  background-color: transparent;
+  height: 50vh;
+  position: absolute;
+  bottom: 0px;
+  z-index: -2;
+  overflow: hidden;
+  perspective-origin: center center;
+  perspective: 15px;
+  transform: perspective(250px) rotateX(45deg);
+}
+.bgcAnime img {
+  position: absolute;
+  left: 0px;
+  height: 1900px;
+  width: 100%;
+  animation: bgcbutton 20s linear infinite;
+}
+@keyframes bgcbutton {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: -1600px;
+  }
+}
+.bgcAnimetop {
+  width: 100%;
+  background-color: transparent;
+  height: 50vh;
+  position: absolute;
+  top: 0px;
+  z-index: -3;
+  overflow: hidden;
+  perspective-origin: center center;
+  perspective: 15px;
+  transform: perspective(250px) rotateX(-45deg);
+}
+.bgcAnimetop img {
+  position: absolute;
+  left: 0px;
+  height: 1900px;
+  width: 100%;
+  animation: bgcbuttontop 20s linear infinite;
+}
+@keyframes bgcbuttontop {
+  0% {
+    top: -1600px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+.BAcover {
+  width: 100%;
+  height: 30vh;
+  background-color: #000000;
+  -webkit-box-shadow: 0px 0px 76px 64px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 76px 64px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 76px 64px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -2;
 }
