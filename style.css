@@ -6,6 +6,8 @@ body {
   font-family: "Noto Sans TC", sans-serif;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
+  height: 100vh;
 }
 .space {
   width: 100%;
@@ -707,4 +709,8 @@ body {
   top: 50%;
   transform: translateY(-50%);
   z-index: -2;
+}
+.myinfo {
+  color: whitesmoke;
+  margin-top: 80px;
 }
